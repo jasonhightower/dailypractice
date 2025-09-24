@@ -1,0 +1,40 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class FractionToRecurringDecimalTest {
+
+    private FractionToRecurringDecimal classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new FractionToRecurringDecimal();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals("0.5", this.classUnderTest.solution(1,2));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals("2", this.classUnderTest.solution(2,1));
+    }
+
+    @Test
+    public void testCase3() {
+        assertEquals("0.(012)", this.classUnderTest.solution(4,333));
+    }
+
+    @Test
+    public void testCase4() {
+        assertEquals("3.(3)", this.classUnderTest.solution(40,12));
+    }
+
+}

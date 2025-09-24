@@ -1,0 +1,46 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import com.hightower.dailypractice.core.model.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class MergeTwoSortedLinkedListsTest {
+
+    private MergeTwoSortedLinkedLists classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new MergeTwoSortedLinkedLists();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(LinkNode.of(1,1,2,3,4,5),
+                     this.classUnderTest.solution(
+                            LinkNode.of(1,2,4),
+                            LinkNode.of(1,3,5)));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(LinkNode.of(1,2),
+                     this.classUnderTest.solution(
+                            LinkNode.of(),
+                            LinkNode.of(1,2)));
+    }
+
+
+    @Test
+    public void testCase3() {
+        assertEquals(LinkNode.of(),
+                     this.classUnderTest.solution(
+                            LinkNode.of(),
+                            LinkNode.of()));
+    }
+
+}

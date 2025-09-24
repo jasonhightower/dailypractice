@@ -1,0 +1,45 @@
+package {pkg};
+
+import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class TwoSumIIITest {
+
+    private TwoSumIII classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new TwoSumIII();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(
+            List.of(
+                List.of(-1,-1,2),
+                List.of(-1,0,1)
+            ),
+            this.classUnderTest.solution(new int[] {-1,0,1,2,-1,-4}));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(
+            List.of(),
+            this.classUnderTest.solution(new int[] {0,1,1}));
+    }
+
+    @Test
+    public void testCase3() {
+        assertEquals(
+            List.of(List.of(0,0,0)),
+            this.classUnderTest.solution(new int[] {0,0,0}));
+    }
+
+}

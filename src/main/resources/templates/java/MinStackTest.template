@@ -1,0 +1,32 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class MinStackTest {
+
+    private MinStack classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new MinStack();
+    }
+
+    @Test
+    public void testMinStack() {
+        this.classUnderTest.push(1);
+        this.classUnderTest.push(2);
+        this.classUnderTest.push(0);
+        assertEquals(0, this.classUnderTest.getMin());
+        this.classUnderTest.pop();
+        assertEquals(2, this.classUnderTest.top());
+        assertEquals(1, this.classUnderTest.getMin());
+    }
+
+}

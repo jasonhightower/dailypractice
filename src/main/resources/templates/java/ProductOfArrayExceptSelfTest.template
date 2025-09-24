@@ -1,0 +1,35 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class ProductOfArrayExceptSelfTest {
+
+    private ProductOfArrayExceptSelf classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new ProductOfArrayExceptSelf();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(
+            new int[] {48,24,12,8},
+            this.classUnderTest.solution(new int[] {1,2,4,6}));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(
+            new int[] {0,-6,0,0,0},
+            this.classUnderTest.solution(new int[] {-1,0,1,2,3}));
+    }
+
+}

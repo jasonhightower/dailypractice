@@ -1,0 +1,36 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class KokoEatingBananasTest {
+
+    private KokoEatingBananas classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new KokoEatingBananas();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(2,
+                this.classUnderTest.solution(
+                        new int[] {1,4,3,2},
+                        9));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(25,
+                this.classUnderTest.solution(
+                        new int[] {25,10,23,4},
+                        4));
+    }
+
+}

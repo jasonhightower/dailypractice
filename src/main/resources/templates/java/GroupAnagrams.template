@@ -1,0 +1,16 @@
+package {pkg};
+
+import com.hightower.dailypractice.core.NotImplemented;
+import java.util.List;
+
+/**
+{description}
+ */
+public class GroupAnagrams {
+
+    @NotImplemented
+    public List<List<String>> solution(String[] strs) {
+        return null;
+    }
+
+}

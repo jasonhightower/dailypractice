@@ -1,0 +1,33 @@
+name: ReverseLinkedList
+description: |
+  Given the beginning of a singly linked list head, reverse the list, and return the new beginning of the list.
+
+  Example 1:
+
+  Input: head = [0,1,2,3]
+
+  Output: [3,2,1,0]
+  Example 2:
+
+  Input: head = []
+
+  Output: []
+difficulty: Easy
+tags:
+  - linkedlist
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: head
+        type: LinkNode
+    output: int[]
+# TODO JH need a problem template mechanism to support this
+testTemplate:
+  name: SimpleTestCases
+  args:
+    cases:
+      - input: [0,1,2,3] # head
+        output: [3,2,1,0]
+      - input: []
+        output: []

@@ -1,0 +1,16 @@
+name: TopKFrequentElements
+description: |
+  Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array.
+  
+  The test cases are generated such that the answer is always unique.
+  
+  You may return the output in any order.
+sources:
+  - name: LeetCode (#347)
+    url: https://leetcode.com/problems/top-k-frequent-elements/description/
+  - name: NeetCode.io
+    url: https://neetcode.io/problems/top-k-frequent-elements
+difficulty: Medium
+tags:
+  - arrays
+  - hashing

@@ -1,0 +1,13 @@
+name: EvaluateReversePolishNotation
+description: |
+  You are given an array of strings `tokens` that represents a valid arrithmetic expression in reverse polish notation.
+  
+  Return the integer that represents the evaluation of the expression.
+  
+  * The operands may be integers or the results of other operations.
+  * the operators include `+`,`-`,`*`, and `/`.
+  * Assume that division between integers always truncates toward zero.
+
+difficulty: Medium
+tags:
+  - stack

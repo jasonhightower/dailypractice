@@ -1,0 +1,30 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class FindTheDuplicateNumberTest {
+
+    private FindTheDuplicateNumber classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new FindTheDuplicateNumber();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(2, this.classUnderTest.solution(new int[] {1,2,3,2,2}));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(4, this.classUnderTest.solution(new int[] {1,2,3,4,4}));
+    }
+
+}

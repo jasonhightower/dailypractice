@@ -1,0 +1,39 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import com.hightower.dailypractice.core.model.*;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class RemoveNthNodeFromEndOfLinkedListTest {
+
+    private RemoveNthNodeFromEndOfLinkedList classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new RemoveNthNodeFromEndOfLinkedList();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(LinkNode.of(1,2,3,4),
+                     this.classUnderTest.solution(LinkNode.of(1,2,4), 2));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(LinkNode.of(),
+                     this.classUnderTest.solution(LinkNode.of(5), 1));
+    }
+
+    @Test
+    public void testCase3() {
+        assertEquals(LinkNode.of(2),
+                     this.classUnderTest.solution(LinkNode.of(1,2), 1));
+    }
+
+}

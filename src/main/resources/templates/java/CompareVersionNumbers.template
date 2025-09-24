@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class CompareVersionNumbers {
+
+    @NotImplemented
+    public int solution(String version1, String version2) {
+        return -1;
+    }
+
+}

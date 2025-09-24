@@ -1,0 +1,7 @@
+name: GenerateParenthesis
+description: |
+  You are given an integer `n`. Return all well-formed parenthesis strings that you can generate with `n` pairs of
+  parenthesis.
+difficulty: Medium
+tags:
+  - stack

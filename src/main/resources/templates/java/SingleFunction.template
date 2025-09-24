@@ -1,0 +1,17 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+import com.hightower.dailypractice.core.model.*;
+
+/**
+{description}
+ */
+public class {name} {
+
+    @NotImplemented
+    public {output} solution({params}) {
+        return {default};
+    }
+
+}

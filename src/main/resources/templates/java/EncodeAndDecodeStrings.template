@@ -1,0 +1,20 @@
+package {pkg};
+
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class EncodeAndDecodeStrings {
+
+    @NotImplemented
+    public String encode(String[] strs) {
+        return null;
+    }
+
+    @NotImplemented
+    public String[] decode(String encoded) {
+        return null;
+    }
+
+}

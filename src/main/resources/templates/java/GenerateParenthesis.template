@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class GenerateParenthesis {
+
+    @NotImplemented
+    public List<String> solution(int num) {
+        return null;
+    }
+
+}

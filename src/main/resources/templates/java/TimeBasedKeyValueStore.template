@@ -1,0 +1,23 @@
+package {pkg};
+
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class TimeBasedKeyValueStore {
+
+    public TimeBasedKeyValueStore() {
+    }
+
+    @NotImplemented
+    public void set(String key, String value, int timestamp) {
+
+    }
+
+    @NotImplemented
+    public String get(String key, int timestamp) {
+        return null;
+    }
+
+}

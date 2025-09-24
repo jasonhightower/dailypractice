@@ -1,0 +1,51 @@
+package {pkg};
+
+import static com.hightower.dailypractice.core.Comparison.assertEqualsUnordered;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import java.util.List;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class GroupAnagramsTest {
+
+    private GroupAnagrams classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new GroupAnagrams();
+    }
+
+    @Test
+    public void testMultipleGroups() {
+        String[] strs = new String[] {"act", "pots", "tops", "cat", "stop", "hat"};
+        List<List<String>> expected = List.of(
+            List.of("hat"),
+            List.of("act","cat"),
+            List.of("pots","tops","stop")
+        );
+        assertEqualsUnordered(expected, this.classUnderTest.solution(strs));
+    }
+
+    @Test
+    public void testSingleGroup() {
+        String[] strs = new String[] {"x"};
+        List<List<String>> expected = List.of(
+            List.of("x")
+        );
+        assertEqualsUnordered(expected, this.classUnderTest.solution(strs));
+    }
+
+    @Test
+    public void testEmptyString() {
+        String[] strs = new String[] {""};
+        List<List<String>> expected = List.of(
+            List.of("")
+        );
+        assertEqualsUnordered(expected, this.classUnderTest.solution(strs));
+    }
+
+}

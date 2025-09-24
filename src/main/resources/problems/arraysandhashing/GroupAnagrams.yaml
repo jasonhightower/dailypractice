@@ -1,0 +1,15 @@
+name: GroupAnagrams
+description: |
+  Given an array of strings `strs`, group all anagrams together into sublists. You may return the output in any order.
+  
+  An anagram is a string that contains the exact same characters as another string, but the order of the characters can 
+  be different.
+sources:
+  - label: LeetCode (#49)
+    url: https://leetcode.com/problems/group-anagrams/
+  - label: NeetCode
+    url: https://neetcode.io/solutions/group-anagrams
+difficulty: Medium
+tags:
+  - arrays
+  - hashing

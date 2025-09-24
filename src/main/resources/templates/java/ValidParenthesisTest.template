@@ -1,0 +1,36 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class ValidParenthesisTest {
+
+    private ValidParenthesis classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new ValidParenthesis();
+    }
+
+    @Test
+    public void testValidSingleParenthesis() {
+        assertTrue(this.classUnderTest.solution("[]"));
+    }
+
+    @Test
+    public void testValidMultipleParenthesis() {
+        assertTrue(this.classUnderTest.solution("([{}])"));
+    }
+
+    @Test
+    public void testInvalidMultipleParenthesis() {
+        assertFalse(this.classUnderTest.solution("[(])"));
+    }
+
+}

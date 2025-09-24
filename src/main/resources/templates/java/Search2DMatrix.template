@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class Search2DMatrix {
+
+    @NotImplemented
+    public boolean solution(int[][] nums, int target) {
+        return false;
+    }
+
+}

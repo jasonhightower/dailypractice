@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class CarFleet {
+
+    @NotImplemented
+    public int solution(int target, int[] position, int[] speed) {
+        return -1;
+    }
+
+}

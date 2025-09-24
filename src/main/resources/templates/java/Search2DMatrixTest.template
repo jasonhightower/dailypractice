@@ -1,0 +1,40 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class Search2DMatrixTest {
+
+    private Search2DMatrix classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new Search2DMatrix();
+    }
+
+    @Test
+    public void testTargetExists() {
+        assertTrue( this.classUnderTest.solution(new int[][] {
+                        {1,2,4,8},
+                        {10,11,12,13},
+                        {14,20,30,40}
+                    },
+                    10));
+    }
+
+    @Test
+    public void testTargetDoesNotExist() {
+        assertTrue( this.classUnderTest.solution(new int[][] {
+                        {1,2,4,8},
+                        {10,11,12,13},
+                        {14,20,30,40}
+                    },
+                    15));
+    }
+
+}

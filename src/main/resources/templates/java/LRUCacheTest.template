@@ -1,0 +1,31 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class LRUCacheTest {
+
+    private LRUCache classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new LRUCache(2);
+    }
+
+    @Test
+    public void testLRUCache() {
+        classUnderTest.put(1,10);
+        assertEquals(10, classUnderTest.get(1));
+        classUnderTest.put(2,20);
+        classUnderTest.put(3,30);
+        assertEquals(20, classUnderTest.get(2));
+        assertEquals(-1, classUnderTest.get(1));
+    }
+
+}

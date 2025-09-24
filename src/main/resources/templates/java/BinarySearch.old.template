@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class BinarySearch {
+
+    @NotImplemented
+    public int solution(int[] nums, int target) {
+        return -1;
+    }
+
+}

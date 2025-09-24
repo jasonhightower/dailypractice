@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class EvaluateReversePolishNotation {
+
+    @NotImplemented
+    public int solution(String[] tokens) {
+        return -1;
+    }
+
+}

@@ -1,0 +1,35 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class CompareVersionNumbersTest {
+
+    private CompareVersionNumbers classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new CompareVersionNumbers();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(-1, this.classUnderTest.solution("1.2", "1.10"));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(0, this.classUnderTest.solution("1.01", "1.001"));
+    }
+
+    @Test
+    public void testCase3() {
+        assertEquals(0, this.classUnderTest.solution("1.0", "1.0.0.0"));
+    }
+
+}

@@ -1,0 +1,4 @@
+.idea
+target
+src/main/java/com/hightower/dailypractice/Day*
+src/test/java/com/hightower/dailypractice/Day*

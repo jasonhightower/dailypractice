@@ -1,0 +1,16 @@
+package {pkg};
+
+import java.util.List;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class TwoSum {
+
+    @NotImplemented
+    public List<Integer> solution(int[] nums, int target) {
+        return null;
+    }
+
+}

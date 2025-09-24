@@ -1,0 +1,39 @@
+package {pkg};
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class EncodeAndDecodeStringsTest {
+
+    private EncodeAndDecodeStrings classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new EncodeAndDecodeStrings();
+    }
+
+    @Test
+    public void testCase1() {
+        final String[] input = new String[] {
+            "neet", "code", "love", "you"
+        };
+        String encoded = this.classUnderTest.encode(input);
+        String[] output = this.classUnderTest.decode(encoded);
+        assertArrayEquals(input, output);
+    }
+
+    @Test
+    public void testCase2() {
+        final String[] input = new String[] {
+            "we", "say", ":", "yes"
+        };
+        String encoded = this.classUnderTest.encode(input);
+        String[] output = this.classUnderTest.decode(encoded);
+        assertArrayEquals(input, output);
+    }
+
+}

@@ -1,0 +1,30 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class ContainerWithMostWaterTest {
+
+    private ContainerWithMostWater classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new ContainerWithMostWater();
+    }
+
+    @Test
+    public void testDuplicate() {
+        assertEquals(36, this.classUnderTest.solution(new int[] {1,7,2,5,4,7,3,6}));
+    }
+
+    @Test
+    public void testNoDuplicate() {
+        assertEquals(4, this.classUnderTest.solution(new int[] {2,2,2}));
+    }
+
+}

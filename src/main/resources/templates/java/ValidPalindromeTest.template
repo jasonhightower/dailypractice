@@ -1,0 +1,31 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class ValidPalindromeTest {
+
+    private ValidPalindrome classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new ValidPalindrome();
+    }
+
+    @Test
+    public void testPalindrome() {
+        assertTrue(this.classUnderTest.solution("Was it a car or a cat I saw?"));
+    }
+
+    @Test
+    public void testNonPalindrome() {
+        assertFalse(this.classUnderTest.solution("tab a cat"));
+    }
+
+}

@@ -1,0 +1,33 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import com.hightower.dailypractice.core.model.*;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class ReOrderLinkedListTest {
+
+    private ReOrderLinkedList classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new ReOrderLinkedList();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(LinkNode.of(2,8,4,6),
+                     this.classUnderTest.solution(LinkNode.of(2,4,6,8)));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(LinkNode.of(2,10,4,8,6),
+                     this.classUnderTest.solution(LinkNode.of(2,4,6,8,10)));
+    }
+
+}

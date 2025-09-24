@@ -1,0 +1,16 @@
+package {pkg};
+
+import com.hightower.dailypractice.core.NotImplemented;
+import java.util.*;
+
+/**
+{description}
+ */
+public class LongestConsecutiveSequence {
+
+    @NotImplemented
+    public int solution(int[] nums) {
+        return -1;
+    }
+
+}
