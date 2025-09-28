@@ -1,0 +1,41 @@
+package {pkg};
+
+import com.hightower.dailypractice.core.NotImplemented;
+import java.lang.Math;
+
+/**
+{description}
+ */
+public class RandomSet {
+
+    public RandomSet() {
+    }
+
+    /**
+     * Inserts an item `val` from the set if present. Returns `true` if the
+     * item was present, `false` otherwise.
+     */
+    @NotImplemented
+    public boolean insert(int val) {
+        return false;
+    }
+
+    /**
+     * Removes an item `val` from the set if present. Returns `true` if the item was present,
+     * `false` otherwise.
+     */
+    @NotImplemented
+    public boolean remove(int val) {
+        return false;
+    }
+
+    /**
+     * Returns a random element from the current set of elements (it's guaranteed that
+     * at least one element exists when this method is called). Each element must have
+     * the same probability of being returned.
+     */
+    @NotImplemented
+    public int getRandom() {
+        return false;
+    }
+}

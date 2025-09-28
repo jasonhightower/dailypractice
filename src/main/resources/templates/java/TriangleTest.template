@@ -1,0 +1,37 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class TriangleTest {
+
+    private Triangle classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new Triangle();
+    }
+
+    @Test
+    public void testCase1() {
+        assertEquals(11, this.classUnderTest.solution(new int[][] {
+                {2},
+               {3,4},
+              {6,5,7},
+             {4,1,8,3}
+        }));
+    }
+
+    @Test
+    public void testCase2() {
+        assertEquals(-10, this.classUnderTest.solution(new int[][] {
+                {-10}
+        }));
+    }
+
+}

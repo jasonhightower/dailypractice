@@ -29,11 +29,11 @@ public class DailyPractice {
 
         Strategy strategy;
         strategy = Strategy.ALL;
-//        strategy = Strategy.RANDOM_5;
+        strategy = Strategy.RANDOM_5;
 //        strategy = Strategy.WEIGHTED_5;
 
-        SelectionStrategy selectionStrategy = strategy.value;
-//        SelectionStrategy selectionStrategy = new SelectByNameStrategy("ReverseLinkedList");
+//        SelectionStrategy selectionStrategy = strategy.value;
+        SelectionStrategy selectionStrategy = new SelectByNameStrategy("MergeKSortedLists");
 
         ProblemSource source = new YAMLProblemSource(resourceAsPath("/problems"));
         List<Problem> problems = source.getProblems();
@@ -57,8 +57,11 @@ public class DailyPractice {
             String template = templateSource.getTemplate("java", problemTemplate.name());
             // TODO JH add a test template
             String testTemplate = templateSource.getTemplate("java", problem.name() + "Test");
+            if (testTemplate == null) {
+                throw new RuntimeException("Test template does not exist for " + problem.name());
+            }
 
-            final String pkg = "com.hightower.dailypractice.test";// + today();
+            final String pkg = "com.hightower.dailypractice." + today();
             Path srcPath = Paths.get("src/main/java/" + pkg.replace('.', '/'));
             File parentFolder = srcPath.toFile();
             if (!parentFolder.exists()) {

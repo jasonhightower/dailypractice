@@ -33,7 +33,7 @@ template:
   args:
     input:
       - name: head
-        type: LinkNode
+        type: LinkNode<Integer>
       - name: n
         type: int
-    output: int[]
+    output: LinkNode<Integer>

@@ -1,0 +1,24 @@
+package {pkg};
+
+import com.hightower.dailypractice.core.model.*;
+import com.hightower.dailypractice.core.NotImplemented;
+
+/**
+{description}
+ */
+public class CopyListWithRandomPointer {
+
+    private static class LinkNodeWithRandom<T> extends LinkNode<T> {
+        public LinkNodeWithRandom<T> random;
+
+        public LinkNodeWithRandom(T value) {
+            super(value);
+        }
+    }
+
+    @NotImplemented
+    public LinkNodeWithRandom solution(LinkNodeWithRandom node) {
+        return null;
+    }
+
+}

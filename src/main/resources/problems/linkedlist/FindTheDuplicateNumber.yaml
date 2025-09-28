@@ -21,10 +21,11 @@ description: |
   - 1 <= n <= 10000
   - nums.length == n + 1
   - 1 <= nums[i] <= n
-difficulty: Easy
+difficulty: Medium
 tags:
   - arrays
   - hashing
+  - linkedlist
 template:
   name: SingleFunction
   args:

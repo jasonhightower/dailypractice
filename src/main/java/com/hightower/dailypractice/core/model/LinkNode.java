@@ -1,6 +1,13 @@
 package com.hightower.dailypractice.core.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LinkNode<T> {
+
+    public static <T> String asString(LinkNode<T> node) {
+        return node == null ? "[]" : node.toString();
+    }
 
     public static LinkNode<Integer> of(int ... values) {
         LinkNode<Integer> head = new LinkNode<>(-1);
@@ -32,6 +39,27 @@ public class LinkNode<T> {
 
     public LinkNode(T value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        Set<LinkNode<T>> visited = new HashSet<>();
+        StringBuilder builder = new StringBuilder();
+        builder.append("[");
+        LinkNode<T> cur = this;
+        while (cur != null) {
+            if (visited.contains(cur)) {
+                break;
+            }
+            visited.add(cur);
+            if (builder.length() > 1) {
+                builder.append(",");
+            }
+            builder.append(cur.value);
+            cur = cur.next;
+        }
+        builder.append("]");
+        return builder.toString();
     }
 
 }

@@ -1,0 +1,31 @@
+package {pkg};
+
+import java.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.hightower.dailypractice.core.NotImplementedCondition;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(NotImplementedCondition.class)
+public class RandomStackTest {
+
+    private RandomStack classUnderTest;
+
+    @BeforeEach
+    void setUp() {
+        this.classUnderTest = new RandomStack();
+    }
+
+    @Test
+    public void testRandomStack() {
+        assertTrue(classUnderTest.insert(1));
+        assertFalse(classUnderTest.remove(2));
+        assertTrue(classUnderTest.insert(2));
+        assertTrue(classUnderTest.remove(1));
+        assertFalse(classUnderTest.insert(2));
+        assertEquals(2, classUnderTest.getRandom());
+    }
+
+}
