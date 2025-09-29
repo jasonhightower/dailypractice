@@ -6,3 +6,10 @@ difficulty: Easy
 tags:
   - arrays
   - hashing
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+    output: boolean

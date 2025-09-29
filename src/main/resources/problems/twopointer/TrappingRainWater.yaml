@@ -7,3 +7,10 @@ description: |
 difficulty: Hard
 tags:
   - twopointer
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: heights
+        type: int[]
+    output: int

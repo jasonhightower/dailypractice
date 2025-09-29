@@ -1,14 +1,11 @@
-package {pkg};
+<#import "common.ftlh" as com>
+package ${pkg};
 
-import com.hightower.dailypractice.core.NotImplemented;
+<@com.solution_imports/>
 
-/**
-{description}
- */
-public class TimeBasedKeyValueStore {
+<@com.javadoc lines=problem.description?split("\n")/>
+public class ${problem.name} {
 
-    public TimeBasedKeyValueStore() {
-    }
 
     @NotImplemented
     public void set(String key, String value, int timestamp) {

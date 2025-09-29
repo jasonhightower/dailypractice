@@ -7,3 +7,10 @@ description: |
 difficulty: Medium
 tags:
   - twopointer
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+    output: List<List<Integer>>

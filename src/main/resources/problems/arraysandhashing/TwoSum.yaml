@@ -10,3 +10,12 @@ difficulty: Easy
 tags:
   - arrays
   - hashing
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+      - name: target
+        type: int
+    output: int[]

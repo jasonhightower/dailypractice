@@ -14,3 +14,10 @@ description: |
 difficulty: Medium
 tags:
   - binarysearch
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+    output: int

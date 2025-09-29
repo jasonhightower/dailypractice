@@ -13,3 +13,10 @@ difficulty: Medium
 tags:
   - arrays
   - hashing
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: strs
+        type: String[]
+    output: List<List<String>>

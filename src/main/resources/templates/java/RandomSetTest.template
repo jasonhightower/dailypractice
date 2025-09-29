@@ -9,17 +9,17 @@ import com.hightower.dailypractice.core.NotImplementedCondition;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(NotImplementedCondition.class)
-public class RandomStackTest {
+public class RandomSetTest {
 
-    private RandomStack classUnderTest;
+    private RandomSet classUnderTest;
 
     @BeforeEach
     void setUp() {
-        this.classUnderTest = new RandomStack();
+        this.classUnderTest = new RandomSet();
     }
 
     @Test
-    public void testRandomStack() {
+    public void testRandomSet() {
         assertTrue(classUnderTest.insert(1));
         assertFalse(classUnderTest.remove(2));
         assertTrue(classUnderTest.insert(2));

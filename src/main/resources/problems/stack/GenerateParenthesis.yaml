@@ -5,3 +5,10 @@ description: |
 difficulty: Medium
 tags:
   - stack
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: n
+        type: int
+    output: List<String>

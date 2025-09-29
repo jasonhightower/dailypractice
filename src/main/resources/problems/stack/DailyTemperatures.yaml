@@ -9,3 +9,10 @@ description: |
 difficulty: Medium
 tags:
   - stack
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: temperatures
+        type: int[]
+    output: int[]

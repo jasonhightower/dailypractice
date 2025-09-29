@@ -1,15 +1,10 @@
-package {pkg};
+<#import "common.ftlh" as com>
+package ${pkg};
 
-import com.hightower.dailypractice.core.NotImplemented;
-import java.lang.Math;
+<@com.solution_imports/>
 
-/**
-{description}
- */
-public class RandomSet {
-
-    public RandomSet() {
-    }
+<@com.javadoc lines=problem.description?split("\n")/>
+public class ${problem.name} {
 
     /**
      * Inserts an item `val` from the set if present. Returns `true` if the
@@ -36,6 +31,7 @@ public class RandomSet {
      */
     @NotImplemented
     public int getRandom() {
-        return false;
+        return -1;
     }
+
 }

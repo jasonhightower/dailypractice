@@ -1,17 +1,16 @@
-package {pkg};
+<#import "common.ftlh" as com>
+package ${pkg};
 
-import com.hightower.dailypractice.core.NotImplemented;
+<@com.solution_imports/>
 
-/**
-{description}
- */
-public class LRUCache {
+<@com.javadoc lines=problem.description?split("\n")/>
+public class ${problem.name} {
 
     /**
      * Initializes an LRU cache of size `capacity`.
      */
     @NotImplemented
-    public LRUCache(int capacity) {
+    public ${problem.name}(int capacity) {
     }
 
     /**

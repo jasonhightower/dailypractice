@@ -25,7 +25,7 @@ description: |
   1 <= sz <= 30
   0 <= Node.val <= 100
   1 <= n <= sz
-difficulty: Easy
+difficulty: Medium
 tags:
   - linkedlist
 template:

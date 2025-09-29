@@ -1,6 +1,6 @@
 name: TwoSumII
 description: |
-  Given an array of integers `numbers` that is sorted in non-descending order.
+  Given an array of integers `numbers` that is sorted in non-descending order and a target `integer` `k`.
   
   Return the indices of (1-indexed) of two numbers, `[index1, index2]`, such that they add up to a given target
   number `target` and `index < index2`. Note that `index1` and `index2` cannot be equal, therefor you may not
@@ -12,3 +12,12 @@ description: |
 difficulty: Medium
 tags:
   - twopointer
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+      - name: target
+        type: int
+    output: int[]

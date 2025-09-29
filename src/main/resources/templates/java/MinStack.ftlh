@@ -1,14 +1,10 @@
-package {pkg};
+<#import "common.ftlh" as com>
+package ${pkg};
 
-import com.hightower.dailypractice.core.NotImplemented;
+<@com.solution_imports/>
 
-/**
-{description}
- */
-public class MinStack {
-
-    public MinStack() {
-    }
+<@com.javadoc lines=problem.description?split("\n")/>
+public class ${problem.name} {
 
     /**
      * Pushes the element val onto the stack.

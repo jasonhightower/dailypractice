@@ -10,3 +10,10 @@ difficulty: Easy
 tags:
   - twopointer
   - strings
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: s
+        type: String
+    output: boolean

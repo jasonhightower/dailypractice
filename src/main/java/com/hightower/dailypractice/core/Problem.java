@@ -6,7 +6,7 @@ public record Problem(String name,
                       String description,
                       Difficulty difficulty,
                       List<String> tags,
-                      Template template) {
+                      TemplateDef template) {
 
     enum Difficulty {
         EASY,

@@ -21,3 +21,14 @@ description: |
 difficulty: Medium
 tags:
   - stack
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: target
+        type: int
+      - name: position
+        type: int[]
+      - name: speed
+        type: int[]
+    output: int

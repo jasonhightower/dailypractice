@@ -11,3 +11,12 @@ description: |
 difficulty: Medium
 tags:
   - binarysearch
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: piles
+        type: int[]
+      - name: hours
+        type: int
+    output: int

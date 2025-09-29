@@ -30,7 +30,7 @@ description: |
 
   1 <= Length of the list <= 1000.
   1 <= Node.val <= 1000
-difficulty: Easy
+difficulty: Medium
 tags:
   - linkedlist
 template:

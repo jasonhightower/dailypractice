@@ -16,3 +16,12 @@ source:
 difficulty: Easy
 tags:
   - strings
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: version1
+        type: String
+      - name: version2
+        type: String
+    output: int

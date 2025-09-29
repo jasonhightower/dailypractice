@@ -21,7 +21,7 @@ public class RemoveNthNodeFromEndOfLinkedListTest {
     @Test
     public void testCase1() {
         assertEquals("[1,2,4]",
-                     LinkNode.asString(this.classUnderTest.solution(LinkNode.of(1,2,3,4)), 2));
+                     LinkNode.asString(this.classUnderTest.solution(LinkNode.of(1,2,3,4), 2)));
     }
 
     @Test

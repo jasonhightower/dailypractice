@@ -1,5 +1,9 @@
 package com.hightower.dailypractice.core;
 
+import com.hightower.dailypractice.core.freemarker.FreeMarkerProblemWriter;
+import freemarker.template.Configuration;
+import freemarker.template.TemplateExceptionHandler;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -29,11 +33,11 @@ public class DailyPractice {
 
         Strategy strategy;
         strategy = Strategy.ALL;
-        strategy = Strategy.RANDOM_5;
+//        strategy = Strategy.RANDOM_5;
 //        strategy = Strategy.WEIGHTED_5;
 
-//        SelectionStrategy selectionStrategy = strategy.value;
-        SelectionStrategy selectionStrategy = new SelectByNameStrategy("MergeKSortedLists");
+        SelectionStrategy selectionStrategy = strategy.value;
+//        SelectionStrategy selectionStrategy = new SelectByNameStrategy("ReverseNodesInKGroup");
 
         ProblemSource source = new YAMLProblemSource(resourceAsPath("/problems"));
         List<Problem> problems = source.getProblems();
@@ -53,7 +57,7 @@ public class DailyPractice {
             // TODO JH this random selection logic needs to be improved greatly
             FileTemplateSource templateSource = new FileTemplateSource(resourceAsPath("/templates"));
 
-            Template problemTemplate = problem.template();
+            TemplateDef problemTemplate = problem.template();
             String template = templateSource.getTemplate("java", problemTemplate.name());
             // TODO JH add a test template
             String testTemplate = templateSource.getTemplate("java", problem.name() + "Test");
@@ -61,8 +65,21 @@ public class DailyPractice {
                 throw new RuntimeException("Test template does not exist for " + problem.name());
             }
 
-            final String pkg = "com.hightower.dailypractice." + today();
-            Path srcPath = Paths.get("src/main/java/" + pkg.replace('.', '/'));
+            final String pkg = "com.hightower.dailypractice.fmtest." + today();
+
+            Configuration config = new Configuration(Configuration.VERSION_2_3_34);
+            config.setClassForTemplateLoading(DailyPractice.class, "/templates/java/");
+            config.setDefaultEncoding("UTF-8");
+            config.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+            config.setLogTemplateExceptions(false);
+            config.setWrapUncheckedExceptions(true);
+            config.setFallbackOnNullLoopVariable(false);
+            config.setSQLDateAndTimeTimeZone(TimeZone.getDefault());
+
+            ProblemWriter writer = new FreeMarkerProblemWriter(pkg, config);
+            writer.writeSolution(problem);
+
+            /*
             File parentFolder = srcPath.toFile();
             if (!parentFolder.exists()) {
                 parentFolder.mkdirs();
@@ -76,6 +93,7 @@ public class DailyPractice {
             } catch (FileAlreadyExistsException e) {
                 System.err.println("Solution for " + problem.name() + " already exists.");
             }
+             */
 
             Path testPath = Paths.get("src/test/java/" + pkg.replace('.', '/'));
             File testParentFolder = testPath.toFile();
@@ -108,7 +126,7 @@ public class DailyPractice {
     }
 
     private static String resolveTemplate(String template, final String pkg, final Problem problem) {
-        Template templateDef = problem.template();
+        TemplateDef templateDef = problem.template();
         Map<String, Object> args = templateDef.args();
         Map<String, String> values = new HashMap<>();
         values.put("name", problem.name());

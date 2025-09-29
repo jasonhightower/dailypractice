@@ -11,3 +11,10 @@ difficulty: Medium
 tags:
   - arrays
   - hashing
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+    output: int

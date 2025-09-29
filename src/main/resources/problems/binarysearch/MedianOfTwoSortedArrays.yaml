@@ -7,3 +7,12 @@ description: |
 difficulty: Hard
 tags:
   - binarysearch
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums1
+        type: int[]
+      - name: nums2
+        type: int[]
+    output: int

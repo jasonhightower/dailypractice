@@ -1,12 +1,10 @@
-package {pkg};
+<#import "common.ftlh" as com>
+package ${pkg};
 
-import com.hightower.dailypractice.core.model.*;
-import com.hightower.dailypractice.core.NotImplemented;
+<@com.solution_imports/>
 
-/**
-{description}
- */
-public class CopyListWithRandomPointer {
+<@com.javadoc lines=problem.description?split("\n")/>
+public class ${problem.name} {
 
     private static class LinkNodeWithRandom<T> extends LinkNode<T> {
         public LinkNodeWithRandom<T> random;

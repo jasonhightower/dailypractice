@@ -10,3 +10,12 @@ description: |
 difficulty: Medium
 tags:
   - binarysearch
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: matrix
+        type: int[][]
+      - name: target
+        type: int
+    output: boolean

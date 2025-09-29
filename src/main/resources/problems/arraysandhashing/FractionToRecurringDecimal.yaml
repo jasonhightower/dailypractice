@@ -23,3 +23,12 @@ description: |
 difficulty: Medium
 tags:
   - hashing
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: numerator
+        type: int
+      - name: denominator
+        type: int
+    output: String

@@ -21,7 +21,7 @@ public class CopyListWithRandomPointerTest {
 
     @Test
     public void testCase() {
-        Assert.fail("Not Implemented");
+        throw new RuntimeException("TEST NOT IMPLEMENTED");
     }
 
 }

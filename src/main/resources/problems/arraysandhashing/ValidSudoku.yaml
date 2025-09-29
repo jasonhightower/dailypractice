@@ -12,3 +12,10 @@ difficulty: Medium
 tags:
   - arrays
   - hashing
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: board
+        type: char[][]
+    output: boolean

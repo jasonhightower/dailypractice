@@ -9,3 +9,12 @@ difficulty: Easy
 tags:
   - arrays
   - hashes
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: s
+        type: String
+      - name: t
+        type: String
+    output: boolean

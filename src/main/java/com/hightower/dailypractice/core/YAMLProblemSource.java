@@ -56,13 +56,13 @@ public class YAMLProblemSource implements ProblemSource {
                 asTemplate(name, (Map<String, Object>)values.get("template")));
     }
 
-    private Template asTemplate(final String name, Map<String, Object> values) {
+    private TemplateDef asTemplate(final String name, Map<String, Object> values) {
         if (values == null) {
-            return new Template(name, null);
+            return new TemplateDef(name, null);
         }
         String tempName = (String)values.get("name");
         Map<String, Object> args = (Map<String, Object>)values.get("args");
-        return new Template(tempName, args);
+        return new TemplateDef(tempName, args);
     }
 
     private static final class YamlVisitor extends SimpleFileVisitor<Path> {

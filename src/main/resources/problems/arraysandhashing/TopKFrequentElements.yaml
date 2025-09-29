@@ -14,3 +14,13 @@ difficulty: Medium
 tags:
   - arrays
   - hashing
+
+template:
+  name: SingleFunction
+  args:
+    input:
+      - name: nums
+        type: int[]
+      - name: k
+        type: int
+    output: int[]
