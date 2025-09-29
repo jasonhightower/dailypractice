@@ -57,6 +57,14 @@
   </dependencies>
   <build>
 	<plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.4.0</version>
+            <configuration>
+                <mainClass>com.hightower.dailypractice.core.DailyPractice</mainClass>
+            </configuration>
+        </plugin>
 	<plugin>
            <groupId>org.apache.maven.plugins</groupId>
            <artifactId>maven-surefire-plugin</artifactId>

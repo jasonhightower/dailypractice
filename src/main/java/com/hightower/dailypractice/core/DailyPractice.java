@@ -65,7 +65,7 @@ public class DailyPractice {
                 throw new RuntimeException("Test template does not exist for " + problem.name());
             }
 
-            final String pkg = "com.hightower.dailypractice.fmtest." + today();
+            final String pkg = "com.hightower.dailypractice.test." + today();
 
             Configuration config = new Configuration(Configuration.VERSION_2_3_34);
             config.setClassForTemplateLoading(DailyPractice.class, "/templates/java/");
